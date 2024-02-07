@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Variável CSS */
+:root{
+    --repeatColumns:repeat(4, 213px);
+}
+/* GRID BODY */
+body{
+    gap: 10px;
+    display: grid;
+    grid-template-areas:
+      "header header header header header"
+      "aside main main main main";
+     grid-template-columns: repeat(5, 1fr) ;
+     grid-template-rows: 56px  968px ; 
+}
+.grid-header{
+    grid-area: header;
+}
+.grid-aside{
+    grid-area: aside;
+}
+.grid-main{
+    grid-area: main;
+    margin: 5px;
+}
+/* GRID HEADER */
+.grid-header{
+    padding: 5px;
+}
+.grid-nav{
+    padding: 5px;
+    padding: 5px;
+    display: grid;
+    grid-template-rows: 35px;
+    grid-template-areas:
+    "menu pesquisar pesquisar pesquisar right";
+    column-gap: 100px;
+}
+.menu {
+    grid-area: menu;
+    place-items: center;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.menu .imgMenu{
+    width: 24px;
+    height: 24px;
+}
+.menu .imgYotube{
+    width: 102px;
+    height: 24px;
+}
+.pesquisar{
+    grid-area: pesquisar;
+    display: flex;
+    justify-content:center;
+}
+.pesquisar .imgPesquisar1{
+    width: 400px;
+    height: 34px;
+    border: solid 1px rgb(204, 204, 204);
+    border-radius: 5px;
+}
+.right{
+    grid-area: right;
+    display: flex;
+    justify-content: space-between;
+}
+.right .imgAvatar{
+    width: 31px;
+    height: 31px;
+    border: solid 3px rgb(204, 204, 204);
+    border-radius: 50%;
+}
+
+/* GRID ASIDE */
+.grid-aside div{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 24px;
+    margin: 15px;
+    display: flex;
+    
+}
+.grid-aside .imgaside{
+    margin-left: 5px;
+    width: 24px;
+    height: 24px
+}
+.grid-aside p{
+    flex: 1;
+	margin: 5px;
+	padding: 0 5px;
+	text-align: left;
+	font-size: 0.8em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* GRID MAIN */
+.grid-main{
+    display: grid;
+    grid-template-areas: 
+    "item-main item-main item-main item-main" 
+    "item-main item-main item-main item-main"
+    "item-main tem-main item-main item-main";
+    grid-template-columns: var(--repeatColumns);
+    grid-template-rows: repeat(3, 250px); 
+    gap: 20px ;
+}
+.item-main{
+    width: 213px;
+    height:250px;
+}
+.imgmain{
+    width: 213px;
+    height: 143px;
+    border-radius: 5px;
+}
+.imgmain-logodiome{
+    width: 30px;
+    height: 30px;
+    margin: 5px 5px 5px 0 ;
+}
+.logodiome{
+    display: grid;
+    grid-template-columns: 35px auto;
+    grid-template-rows: 40px 40px ;
+    grid-template-areas:"imgmain-logodiome text1 " "imgmain-logodiome text2";
+}
+.imgmain-logodiome{
+    grid-area:imgmain-logodiome ;
+}
+.text1{
+    grid-area: text1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    flex: 1;
+	margin: 3px;
+	padding:  3px;
+	text-align: left;
+}
+.text2{
+    grid-area: text2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    flex: 1;
+	margin: 2px;
+	padding:  2px;
+	text-align: left;
+}
